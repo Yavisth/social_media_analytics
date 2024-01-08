@@ -19,7 +19,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 celery = Celery(
     app.name,
-    broker= 'transport://guest:guest@localhost//',
+    broker= 'pyamqp://guest:guest@localhost//',
     backend= 'rpc://'
 )
 celery.conf.update(app.config)
