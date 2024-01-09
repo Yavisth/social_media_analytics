@@ -45,7 +45,7 @@ The application uses Flask for the web framework, PostgreSQL for the database, C
 1. Clone the repository:
 
     ```bash
-     git clone https://github.com/your-username/social-media-analytics.git
+     git clone https://github.com/Yavisth/social-media-analytics.git
     ```
 2. Navigate to the project directory:
    ```bash
