@@ -43,40 +43,41 @@ The application uses Flask for the web framework, PostgreSQL for the database, C
 
 1. Clone the repository:
 
-  ```bash
-   git clone https://github.com/your-username/social-media-analytics.git
-  ```
+    ```bash
+     git clone https://github.com/your-username/social-media-analytics.git
+    ```
 2. Navigate to the project directory:
    ```bash
-   cd social-media-analytics
+     cd social-media-analytics
    ```
 3. Create a virtual environment:
    ```bash
-    python -m virtualenv env
+      python -m virtualenv env
    ```
 4. Activate the virtual environment:
     ```bash
-    .\env\Scripts\activate
+      .\env\Scripts\activate
    ```
 5. Install the required dependencies:
    ```bash
-    pip install -r requirements.txt
+      pip install -r requirements.txt
    ```
 6. Make sure your rabbitmq, celery, and postgresql database are setup and running. Edit the configuration accordingly in ```__init.py__```
 
 ## Running the Application
 
 - Run the following command to start the Flask development server:
-```bash
-  python run.py
-```
+  ```bash
+      python run.py
+  ```
 - Run the following to start the worker service (celery):
-```bash
-  python -m celery -A app.celery worker --loglevel=info
-```
+  ```bash
+      python -m celery -A app.celery worker --loglevel=info
+  ```
 Visit http://localhost:5000 in your web browser to access the application.
 
--Visit endpoint '/api/v1/posts/', wherein a json in the form of {<"id">, <"content">} can be sent to populate the database
+-Visit endpoint '/api/v1/posts/', wherein a json in the form of {<"id">, <"content">} can be sent to populate the database.
+
 -Visit endpoint '/api/v1/posts/<post_id>/analysis/', is a celery worker that is an analysis endpoint that returns
   the number of words and average word length in a post.
 
