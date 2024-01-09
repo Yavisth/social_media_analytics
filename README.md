@@ -5,7 +5,7 @@ Social Media Analytics is a Flask application for analyzing social media data.
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Scaling and Infrastructure](#Scaling-and-Infrastructure)
+- [Scaling and Infrastructure](#scaling-and-infrastructure)
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -76,9 +76,9 @@ The application uses Flask for the web framework, PostgreSQL for the database, C
   ```
 Visit http://localhost:5000 in your web browser to access the application.
 
--Visit endpoint '/api/v1/posts/', wherein a json in the form of {<"id">, <"content">} can be sent to populate the database.
+- Visit endpoint '/api/v1/posts/', wherein a json in the form of {<"id">, <"content">} can be sent to populate the database.
 
--Visit endpoint '/api/v1/posts/<post_id>/analysis/', is a celery worker that is an analysis endpoint that returns
+- Visit endpoint '/api/v1/posts/<post_id>/analysis/', is a celery worker that is an analysis endpoint that returns
   the number of words and average word length in a post.
 
 ##  Database Setup
