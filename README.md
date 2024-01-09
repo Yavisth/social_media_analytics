@@ -15,7 +15,8 @@ Social Media Analytics is a Flask application for analyzing social media data.
 
 ## Introduction
 
-This Flask application provides tools for social media data analytics. Users can analyze trends, track hashtags, and gain insights into their social media presence.
+This Flask application provides tools two endpoint, `POST` accepts a json payload with 'id' and 'content' to create entry in the databse, and `GET` provides an analysis endpoint that returns
+the number of words and average word length in a post.
 
 ## Scaling and Infrastructure
 
